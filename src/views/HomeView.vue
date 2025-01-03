@@ -12,7 +12,7 @@ function setCountValue() {
 
 <template>
   <div class="flex items-center">
-    
+    <div>test</div>
     <InputNumber v-model="count_number" />
     <Button @click="setCountValue()" severity="secondary" label="Set Value" />
   </div>
