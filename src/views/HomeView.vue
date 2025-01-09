@@ -14,6 +14,7 @@ function setCountValue() {
   <div class="flex flex-col items-center">
     <div>test</div>
     <p>2</p>
+    <div>3</div>
     <p>{{ $t('hello') }}</p>
     <InputNumber v-model="count_number" />
     <Button @click="setCountValue()" severity="secondary" label="Set Value" />
