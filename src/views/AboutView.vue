@@ -1,15 +1,18 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+<script setup>
+import { useToast } from "primevue";
+import Button from "primevue/button";
+import Toast from 'primevue/toast';
+const toast = useToast()
+const show = () => {
+    toast.add({ severity: 'warn', summary: 'Warn Message', detail: 'Message Content', group:"bl" , life: 3000 });
 }
-</style>
+</script>
+
+<template>
+  <div class="flex flex-col items-center">
+    <div>test</div>
+    <p>{{ $t('hello') }}</p>
+    <Button @click="show()" severity="secondary" label="Call Toast" />
+  </div>
+  <Toast position="bottom-left" group="bl" />
+</template>

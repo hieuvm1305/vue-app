@@ -22,13 +22,23 @@ const router = createRouter({
       name: 'count',
       component: () => import('../views/Count.vue'),
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/login/Login.vue'),
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/signup/SignUp.vue'),
+    },
   ],
 })
-const publicPaths = ['/', '/login', '/register']
-router.beforeEach(async (to) => {
-  if (!publicPaths.includes(to.path)) {
-    return '/login'; // Redirect to login page
-  }
-})
+// const publicPaths = ['/', '/login', '/register']
+// router.beforeEach(async (to) => {
+//   if (!publicPaths.includes(to.path)) {
+//     return '/login'; // Redirect to login page
+//   }
+// })
 
 export default router
