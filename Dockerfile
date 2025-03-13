@@ -11,6 +11,6 @@ RUN npm install
 
 RUN npm run build
 
-EXPOSE 4173
+# build image: docker buildx build -t vue-app
+# docker run -d -p 4173:4173 vue-app
 
-CMD [ "sh", "-c", "npm run preview" ]
